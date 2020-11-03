@@ -1,9 +1,4 @@
 //----------------------CLIENT SIDE JS ------------------------
-
-console.log('client side works');
-
-
-
 const weatherForm = document.querySelector("form");
 
 const address = document.querySelector('input');
