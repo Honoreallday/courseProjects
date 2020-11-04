@@ -5,6 +5,7 @@ const geo = require("./utils/geoCode.js");
 const weath = require("./utils/forecast.js");
 
 console.log(__dirname);
+const port = process.env.PORT || 3000;
 
 //define paths and express configuration
 const pubDirPath = path.join(__dirname,"../public");
@@ -107,6 +108,6 @@ app.get('*', (req,res) => {
     });
 });
 
-app.listen(3000, () => {
-    console.log('server is live baby')
+app.listen(port, () => {
+    console.log('server is live baby at port' + port)
 });   

@@ -13,7 +13,7 @@ weatherForm.addEventListener('submit', (e) => {
     const addy = address.value; 
 
     locationBox.textContent = 'Loading...';
-    let url = 'http://localhost:3000/weather';
+    let url = '/weather';
     if (addy.length !== 0){
         url += "?addy=" + addy;
     }
