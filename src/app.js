@@ -57,7 +57,7 @@ app.get('/weather', (req,res) => {
                 Error: error
             })
         } else {
-            weath.forecast(lat, long, (error, {temp, feel}) => {
+            weath.forecast(lat, long, (error, response) => {
                 if(error){
                     return res.send({
                         Error: error
@@ -66,8 +66,10 @@ app.get('/weather', (req,res) => {
                 res.send(
                     {
                         forcast: {
-                            temp: temp, 
-                            feel: feel
+                            temp: response.temp, 
+                            feel: response.feel,
+                            windS: response.windS,
+                            windD: response.windD 
                                 },
                         location: place,
                         initSearch: req.query.addy

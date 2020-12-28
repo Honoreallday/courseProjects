@@ -11,7 +11,9 @@ const forecast = (lat, long, callback) => {
         } else {
            callback(undefined,{
                temp: body.current.temperature,
-               feel: body.current.feelslike
+               feel: body.current.feelslike,
+               windS: body.current.wind_speed,
+               windD: body.current.wind_dir
            })
         }
     })

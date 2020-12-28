@@ -5,6 +5,7 @@ const address = document.querySelector('input');
 
 const locationBox = document.querySelector('#location');
 const forecastBox = document.querySelector('#forecast');
+const windBox = document.querySelector('#wind');
 
 
 weatherForm.addEventListener('submit', (e) => {
@@ -25,7 +26,7 @@ weatherForm.addEventListener('submit', (e) => {
 
         locationBox.textContent = data.location;
         forecastBox.textContent = data.forcast.temp;
-
+        windBox.textContent = "wind speed of: " + data.forcast.windS + " and a direction of: " + data.forcast.windD
     })
 })
 })
